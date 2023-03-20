@@ -33,7 +33,7 @@ def check_tokens():
 
 
 def send_message(bot, message):
-    """Отправка сообщения в Telegram чат"""
+    """Отправка сообщения в Telegram чат."""
     try:
         bot.send_message(TELEGRAM_CHAT_ID, message)
         logging.debug('Сообщение отправлено!')
@@ -65,13 +65,13 @@ def check_response(response):
 
 
 def parse_status(homework):
-    """Проверяет статуса домашней работы"""
+    """Проверяет статуса домашней работы."""
     homework_name = homework.get('homework_name')
     homework_status = homework.get('status')
     if not homework_name:
         raise KeyError('В ответе нет ключа homework_name')
     if homework_status not in HOMEWORK_VERDICTS:
-        raise ValueError(f'Неизвестный статус домашней работы')
+        raise ValueError('Неизвестный статус домашней работы')
     verdict = HOMEWORK_VERDICTS[homework_status]
     return f'Изменился статус проверки работы "{homework_name}". {verdict}'
 
