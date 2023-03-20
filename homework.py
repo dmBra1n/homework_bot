@@ -105,7 +105,9 @@ def main():
 if __name__ == '__main__':
     logging.basicConfig(
         filename='main.log',
+        filemode='w',
         format='%(asctime)s [%(levelname)s] %(message)s'
+
     )
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
