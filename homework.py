@@ -113,7 +113,7 @@ def main():
         sys.exit('Критическая ошибка! Отсутствуют токены')
 
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
-    timestamp = int(time.time())
+    timestamp = 0
     sent_message = ''
     sent_error = ''
 
@@ -141,18 +141,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # Перенес наверх, иначе падает pytest
-    # Вопрос: а где лучше размещать блок кода с logger?
-    # В main или просто в начале файла?
-
-    # logging.basicConfig(
-    #     filename='main.log',
-    #     filemode='w',
-    #     format='%(asctime)s [%(levelname)s] [%(funcName)s] %(message)s'
-    # )
-    # logger = logging.getLogger(__name__)
-    # logger.setLevel(logging.DEBUG)
-    # handler = logging.StreamHandler(sys.stdout)
-    # logger.addHandler(handler)
-
     main()
