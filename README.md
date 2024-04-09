@@ -23,6 +23,6 @@ Telegram Bot для отслеживания изменений статуса �
     TELEGRAM_TOKEN =<токен_Telegram_bot>
     TELEGRAM_CHAT_ID=<id_Telegram_чата>
     ```
-    Получить <a href="https://oauth.yandex.ru/authorize?response_type=token&client_id=1d0b9dd4d652455a9eb710d450ff456a" target="_blank">токен</a> ЯндексПрактикум
+    - Получить <a href="https://oauth.yandex.ru/authorize?response_type=token&client_id=1d0b9dd4d652455a9eb710d450ff456a" target="_blank">токен</a> ЯндексПрактикум
 
 5. Запустить проект с помощью `python homework_bot.py`
